@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>fake stopwatch</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <titletextareatopWatch</title>
+    <link rel="stylesheet" href="stopwatch.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="heading">
+        <h1>Stopwatch</h1>
+    </div>
+    <div id="cont-btn">
+        <button class="btn" id="strt-btn">Start</button>
+        <button class="btn" id="stop-btn">Stop</button>
+        <button class="btn" id="rst-btn">Reset</button>
+    </div>
+    <div id="circle"></div>
+    <div id="container">
+        <span class="time" id="min">00</span>
+        <span class="time">:</span>
+        <span class="time" id="sec">00</span>
+    </div>
+    <div >
+        <button id="setting"><i class="fa fa-gear fa-spin" style="font-size:24px"></i></button>
+    </div>
+    <div id="valuebtn">
+        <textarea type="number" class="val" id = "minvalue" placeholder="min"></textarea><br>
+        <textarea type="number" class="val" id = "secvalue" placeholder="sec"></textarea>
+        <input type="submit" id="submit">
+    </div>
+    <script src="stopwatch.js"></script>
+</body>
+
+</html>

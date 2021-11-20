@@ -1,0 +1,73 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+}
+h1{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    margin: 30px 23px;
+    font-size: 40px;
+}
+.btn{
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 13px 27px;
+    color: white;
+    margin-left: 20px;
+    cursor: pointer;
+    background-color: rgb(56, 45, 32);
+    
+}
+#cont-btn{
+    position: relative;
+    margin-top: 460px;
+    
+}
+.time{
+    color: white;
+    font-size: 48px;
+
+}
+#container{
+    position: absolute;
+    margin: -300px 120px;
+    
+}
+#setting{
+    position: relative;
+    background-color: black;
+    border: none;
+    margin: 20px 158px;
+}
+i{
+    color: white;
+}
+#valuebtn{
+    position: absolute;
+    margin: -434px 83px;
+    border: 2px solid white;
+    padding: 40px;
+    background-color: whitesmoke;
+    border-radius: 30px;
+    display: none;
+    
+}
+.val{
+    width: 100px;
+    height: 24px;
+    margin: 5px;
+    border: wheat;
+}
+#submit{
+    margin-left: 25px;
+    margin-top: 15px;
+}
+#circle{
+    position: absolute;
+    background-color: rgb(71, 64, 54);
+    padding: 81px;
+    border-radius: 50%;
+    margin: -356px 96px;
+}
