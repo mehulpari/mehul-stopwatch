@@ -1,9 +1,3 @@
-// var min = 00;
-// var sec = 00;
-
-// minvalue.innerhtml = min
-
-
 
 var setting = document.getElementById("setting")
 setting.addEventListener("click", () => {
@@ -26,13 +20,62 @@ class display {
       min1.innerHTML = values.minvalue
    }
 
-      clear(){
-         document.getElementById("minvalue").value = "00";
-         document.getElementById("secvalue").value = "00";
+   clear() {
+      document.getElementById("minvalue").value = "00";
+      document.getElementById("secvalue").value = "00";
+   }
+   val() {
+      var sec1 = document.getElementById("sec");
+      var min1 = document.getElementById("min");
+      let a = parseInt(sec1.innerHTML);
+      let b = parseInt(min1.innerHTML);
+      var strtbtn = document.getElementById("strt-btn");
+      var stopbtn = document.getElementById("stop-btn");
+      var rstbtn = document.getElementById("rst-btn");
+      var interval;
+      strtbtn.addEventListener("click", () => {
+         clearInterval(interval);
+         interval = setInterval(setSec, 1000);
+      });
+
+      stopbtn.addEventListener("click", () => {
+         clearInterval(interval);
+      });
+      rstbtn.addEventListener("click", () => {
+         clearInterval(interval);
+         a = "00"
+         b = "00"
+         sec1.innerHTML = a;
+         min1.innerHTML = b;
+      })
+
+
+      function setSec() {
+         a++;
+         if (a <= 9) {
+            sec1.innerHTML = "0" + a
+         }
+         if (a > 9) {
+            sec1.innerHTML = a
+
+         }
+         if (a >= 59) {
+            b++;
+            min1.innerHTML = "0" + b;
+            a = "00";
+            sec1.innerHTML = "0" + 0
+         }
+         if (b > 9) {
+            let min1 = document.getElementById("min");
+            min1.innerHTML = b
+         }
       }
-
-
+   }
 }
+
+
+
+
 minvalue.innerText = "00"
 secvalue.innerHTML = "00"
 
@@ -52,6 +95,7 @@ function gettinValues(e) {
    let Display = new display()
    Display.add(values)
    Display.clear()
+   Display.val()
    e.preventDefault;
 
 }
